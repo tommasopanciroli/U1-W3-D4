@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EpiCalendar</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <!-- nome del mese: ora deve rimanere VUOTO, lo riempirò via JS una volta capito in che mese siamo! -->
+      </h1>
+    </header>
+    <main>
+      <section id="calendar">
+        <!-- qui dentro andranno a finire un tot numero di "celle", corrispondenti ai giorni del mese. Verrà tutto generato da JS, perchè ora non so quante ne devo creare... 30? 31? 28? -->
+      </section>
+
+      <section id="addMeeting">
+        <h2>Add Meeting</h2>
+        <div>
+          <h4>Meeting Day</h4>
+          <!-- questo span ha un valore iniziale di "Click on a Day" ma poi, appena cliccata una cella, prende il numero della cella cliccata -->
+          <span id="newMeetingDay">Click on a Day</span>
+        </div>
+        <form id="meeting-form">
+          <div>
+            <label for="newMeetingTime"><h4>Meeting Time</h4></label>
+            <input id="newMeetingTime" type="time" required />
+          </div>
+          <div>
+            <label for="newMeetingName"><h4>Meeting Name</h4></label>
+            <input
+              id="newMeetingName"
+              placeholder="Insert a name for the meeting"
+              required
+            />
+          </div>
+          <div>
+            <h4>Add</h4>
+            <!-- questo bottone automaticamente riceve un type="submit" dal form -->
+            <button>Save Meeting</button>
+          </div>
+        </form>
+      </section>
+      <section id="appointments">
+        <h2>Appointments for the Day:</h2>
+        <ul id="appointments-list">
+          <!-- qui andranno a finire tutti gli appuntamenti della giornata, sempre che ce ne siano (altrimenti tutta questa section verrà nascosta) -->
+        </ul>
+      </section>
+    </main>
+    <script src="./script/index.js"></script>
+  </body>
+</html>
